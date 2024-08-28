@@ -16,13 +16,13 @@
     --color-caution: #A80A00;
   }
 
-  --sp-l: 64px;
-  --sp-m: 32px;
-  --sp-s: 16px;
+  --sp-l: 4rem;  /* 64px */
+  --sp-m: 2rem;  /* 32px */
+  --sp-s: 1rem;  /* 16px */
   @media (width < 480px) {
-    --sp-l: 48px;
-    --sp-m: 16px;
-    --sp-s: 8px;
+    --sp-l: 3rem;  /* 48px */
+    --sp-m: 1rem;  /* 16px */
+    --sp-s: 0.5rem;  /* 8px */
   }
 
   --english-font: "Noto Sans", "Robot", "Avenir Next", "Avenir", "Century Gothic", "SF Pro Text", "Arial", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -37,12 +37,12 @@
   );
   background-size: 16px 16px; */
 
-  line-height: 1.6;
+  line-height: 2.7;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.325rem; 
   font-family: "Noto Sans", system-ui, "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
   @media (width < 480px) {
-    font-size: 16px;
+    font-size: 1.1rem; 
   }
 }
 

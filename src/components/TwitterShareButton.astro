@@ -1,0 +1,21 @@
+---
+interface Props {
+  text: string;
+  url: string;
+}
+
+const { text, url } = Astro.props;
+
+const encodedText = encodeURIComponent(text);
+const encodedUrl = encodeURIComponent(url);
+const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`;
+---
+
+<a
+  href={twitterShareUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="inline-block bg-[#1DA1F2] text-white px-4 py-2 rounded-full font-bold hover:bg-[#1a91da] transition-colors"
+>
+  X で共有
+</a>
