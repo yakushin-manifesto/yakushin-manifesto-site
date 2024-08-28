@@ -1,6 +1,10 @@
 ---
 // Footer UI displayed on each page.
 import LocalesHomeList from "@/components/i18n/LocalesHomeList.astro";
+import { SITE_TITLE } from "@/consts";
+import { useTranslations, type Lang } from "@/i18n";
+const t = useTranslations(Astro.currentLocale as Lang);
+
 ---
 
 <footer class="l-footer l-content">
@@ -9,6 +13,7 @@ import LocalesHomeList from "@/components/i18n/LocalesHomeList.astro";
     target="_blank"
     class="github"
   >
+    <!-- <span class="material-icons-sharp">github</span> -->
     GitHub
     <span class="material-icons-sharp dir">open_in_new</span>
   </a>
@@ -17,8 +22,8 @@ import LocalesHomeList from "@/components/i18n/LocalesHomeList.astro";
     <LocalesHomeList />
   </ul>
 
-  <a class="copy" href="https://hira.page/" target="_blank" dir="ltr">
-    © Akira HIRATA {new Date().getFullYear()}.
+  <a class="copy" href="/" target="_blank" dir="ltr">
+    © {t(SITE_TITLE)} {new Date().getFullYear()}
   </a>
 </footer>
 
@@ -28,19 +33,21 @@ import LocalesHomeList from "@/components/i18n/LocalesHomeList.astro";
     text-align: center;
     background-color: var(--color-theme);
     color: var(--color-base);
-    border-radius: 16px;
+    border-radius: 100px 100px 0 0;
     margin-block-end: -16px;
   }
 
   .github {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
     margin-block-start: calc(var(--sp-m) * -1 - 24px);
     margin-inline: auto;
     width: 160px;
     height: 48px;
-    line-height: 48px;
-    background: var(--color-accent);
-    color: var(--color-main);
+    background: var(--color-main);
+    color: var(--color-base);
     font-weight: 600;
     letter-spacing: 0.01em;
     border-radius: 100px;
@@ -71,6 +78,7 @@ import LocalesHomeList from "@/components/i18n/LocalesHomeList.astro";
     display: block;
     margin-block-start: var(--sp-m);
     opacity: 0.8;
+    /* font-weight: 600; */
     letter-spacing: 0.05em;
   }
 </style>
