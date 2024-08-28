@@ -1,27 +1,41 @@
 ---
 interface Props {
-  title: string;
-  description: string;
-  buttonText: string;
-  buttonLink: string;
+  text: string;
+  url: string;
 }
 
-const { title, description, buttonText, buttonLink } = Astro.props;
+const { text, url } = Astro.props;
 ---
 
-<div class="bg-indigo-700">
-  <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-      <span class="block">{title}</span>
-    </h2>
-    <p class="mt-4 text-lg leading-6 text-indigo-200">
-      {description}
-    </p>
-    <a
-      href={buttonLink}
-      class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"
-    >
-      {buttonText}
-    </a>
-  </div>
+<div class="call-to-action-wrapper">
+  <a href={url} class="call-to-action-button">
+    {text}
+    <span class="material-icons-sharp">arrow_forward</span>
+  </a>
 </div>
+
+<style>
+  .call-to-action-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+  }
+
+  .call-to-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 0.75em 1.5em;
+    background: var(--color-accent, #ff4500);
+    color: var(--color-base, #ffffff);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+  }
+
+  .call-to-action-button:hover {
+    background-color: color-mix(in srgb, var(--color-accent, #ff4500) 80%, black);
+  }
+</style>
