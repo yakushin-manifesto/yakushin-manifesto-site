@@ -1,9 +1,9 @@
 {
-  "name": "celestial-chroma",
-  "description": "A starter for Astro with i18n support",
+  "name": "yakushin-manifesto-site",
+  "description": "Website for the Translation Advancement Manifesto",
   "version": "0.0.1",
   "license": "MIT",
-  "homepage": "https://astro-i18n-starter.pages.dev/",
+  "homepage": "https://yakushin-manifesto.org/",
   "engines": {
     "node": ">=18"
   },
