@@ -4,15 +4,45 @@ title: "マニフェスト"
 description: "マニフェスト説明"
 ---
 import PageHeadline from "@/components/PageHeadline.astro";
+import Hero from '@/components/Hero.astro'
+import CallToAction from '@/components/CallToAction.astro'
 import { SITE_TITLE } from "@/consts";
 
-<PageHeadline title={frontmatter.title} />
+{/* <PageHeadline title={frontmatter.title} /> */}
 
+{/* // export const metadata = {
+//   title: '翻訳躍進マニフェスト - 日本の新たな経済革命',
+//   description: '翻訳を通じて日本の経済を再び世界のトップに押し上げるプロジェクト'
+// } */}
 
+<Hero 
+  title="翻訳躍進マニフェスト"
+  subtitle="日本の新たな経済革命の幕開け"
+/>
 
-## Components
+## 私たちのビジョン
 
-`src/components/i18n/` 内には多言語サイトを生成する上で便利なUIコンポーネントをいくつか用意しています。必要に応じて内容をカスタムしたり、importしてご利用ください。
+**たった17年で、明治時代の日本は世界最先端の技術大国へと変貌を遂げました。**
+その鍵は、西洋の知識を日本語に翻訳し、広く普及させたことにありました。
+今、私たちは再びこの戦略を現代に蘇らせ、日本を世界のリーダーへと導く新たな挑戦を始めます。
 
-### LocaleSelect.astro
-利用言語を切り替えるためのセレクトUIです。
+## マニフェスト
+
+1. **知識の民主化：** 最先端の技術情報を全ての日本人に
+2. **AI活用：** 最新のAI技術で翻訳の質と速度を革新
+3. **オープンコラボレーション：** 産学官民の力を結集
+4. **グローバル視点：** 世界の知を日本の発展に活かす
+5. **イノベーション促進：** 新たな知識で日本発の革新を
+
+<CallToAction
+  title="日本の未来は、あなたの手の中に"
+  description="翻訳者、エンジニア、起業家、学生、全ての日本人の力が必要です。"
+  buttonText="今すぐ参加する"
+  buttonLink="#join"
+/>
+
+## 100年後の日本へ
+
+> "2023年の翻訳躍進マニフェストが、日本の新たな黄金時代の幕開けとなった"
+> 
+> — 未来の歴史書より
