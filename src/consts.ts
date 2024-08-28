@@ -15,7 +15,7 @@ export const SITE_DESCRIPTION: string | Multilingual = {
   "zh-cn": "翻译飞跃宣言 - 日本新的经济革命"
 };
 
-export const X_ACCOUNT: string | Multilingual = "@psephopaiktes";
+export const X_ACCOUNT: string | Multilingual = "@gunta85";
 
 export const NOT_TRANSLATED_CAUTION: string | Multilingual = {
   en: "This page is not available in your language.",

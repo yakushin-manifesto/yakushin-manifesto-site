@@ -4,11 +4,11 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-i18n-starter.pages.dev',
+  site: 'https://yakushin-manifesto.org',
   integrations: [mdx(), sitemap()],
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'ja', 'zh-cn', 'ar'],
+    locales: ['en', 'ja', 'zh-cn'],
     routing: {
       prefixDefaultLocale: true,
       redirectToDefaultLocale: false,

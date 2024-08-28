@@ -1,19 +1,15 @@
 /* basic page style */
 
-:lang(ar) {
-  * { letter-spacing: 0 !important; }
-}
-
 :root {
   @media (prefers-color-scheme: dark) {
-    --color-theme: #ef4d1a;
+    --color-theme: #ef1a1a;
     --color-accent: #943e0d;
     --color-base: #342c28;
     --color-main: #faf9f6;
     --color-caution: #FFAA2B;
   }
   @media (prefers-color-scheme: light) {
-    --color-theme: #ef4d1a;
+    --color-theme: #ef1a1a;
     --color-accent: #ffcc21;
     --color-base: #faf9f6;
     --color-main: #342c28;
@@ -35,11 +31,11 @@
   background-color: var(--color-base);
   accent-color: var(--color-theme);
 
-  background-image: radial-gradient(
+  /* background-image: radial-gradient(
     color-mix(in srgb, var(--color-main) 10%, transparent) 1px,
     var(--color-base) 1px
   );
-  background-size: 16px 16px;
+  background-size: 16px 16px; */
 
   line-height: 1.6;
   font-weight: 500;
