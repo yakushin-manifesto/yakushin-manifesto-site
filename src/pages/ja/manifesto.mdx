@@ -1,0 +1,18 @@
+---
+layout: "@/layouts/Article.astro"
+title: "マニフェスト"
+description: "マニフェスト説明"
+---
+import PageHeadline from "@/components/PageHeadline.astro";
+import { SITE_TITLE } from "@/consts";
+
+<PageHeadline title={frontmatter.title} />
+
+
+
+## Components
+
+`src/components/i18n/` 内には多言語サイトを生成する上で便利なUIコンポーネントをいくつか用意しています。必要に応じて内容をカスタムしたり、importしてご利用ください。
+
+### LocaleSelect.astro
+利用言語を切り替えるためのセレクトUIです。

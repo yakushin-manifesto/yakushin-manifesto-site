@@ -8,6 +8,7 @@ import heroImageAr from "@/assets/ar/hero.svg";
 import heroImageEn from "@/assets/en/hero.svg";
 import heroImageJa from "@/assets/ja/hero.svg";
 import heroImageZhCn from "@/assets/zh-cn/hero.svg";
+import heroLogo from "@/assets/yakushin01.png";
 import { Image } from "astro:assets";
 
 const locale = Astro.currentLocale as Lang;
@@ -21,18 +22,20 @@ export const getStaticPaths = () =>
 <Layout>
   <Image
     src={locale === "ja"
-      ? heroImageJa
+      ? heroLogo
       : locale === "zh-cn"
-        ? heroImageZhCn
+        ? heroLogo
         : locale === "ar"
-          ? heroImageAr
-          : heroImageEn}
+          ? heroLogo
+          : heroLogo}
     alt={t({
       ja: "こんにちは",
       en: "Hello",
       "zh-cn": "你好"
     })}
     loading="eager"
+    width={500}
+    height={500}
   />
 
   <p>
