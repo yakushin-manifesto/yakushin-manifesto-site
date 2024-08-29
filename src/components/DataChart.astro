@@ -1,0 +1,78 @@
+---
+import AstroBarChart from "astro-barchart";
+
+const data = [
+  { key: "French", value: 10 },
+  { key: "English", value: 9 },
+  { key: "Italian", value: 8 },
+  { key: "German", value: 7 },
+  { key: "Spanish", value: 6 },
+  { key: "Portuguese", value: 5 },
+  { key: "Dutch", value: 4 },
+  { key: "Russian", value: 3 },
+  { key: "Swedish", value: 2 },
+  { key: "Danish", value: 1 },
+  { key: "Arabic", value: 10 },
+  { key: "Norwegian", value: 9 },
+  { key: "Hebrew", value: 8 },
+  { key: "Greek", value: 7 },
+  { key: "Polish", value: 6 },
+  { key: "Japanese", value: 5 },
+  { key: "Czech", value: 4 },
+  { key: "Urdu", value: 3 },
+  { key: "Romanian", value: 2 },
+  { key: "Turkish", value: 1 },
+  { key: "Bengali", value: 10 },
+//   { key: "Chinese", value: 9 },
+//   { key: "Croatian", value: 8 },
+//   { key: "Bulgarian", value: 7 },
+//   { key: "Hindi", value: 6 },
+//   { key: "Indonesian", value: 5 },
+//   { key: "Korean", value: 4 },
+//   { key: "Marathi", value: 3 },
+//   { key: "Persian", value: 2 },
+//   { key: "Tamil", value: 1 },
+//   { key: "Thai", value: 10 },
+//   { key: "Ukrainian", value: 9 },
+//   { key: "Vietnamese", value: 8 },
+];
+---
+
+<div title="astro-barchart demo">
+
+  <div class="chart">
+    <AstroBarChart
+      data={data}
+      title="主要言語における技術的知識の蓄積"
+      xLabel="Years"
+      yLabel="Values per year"
+      keyVal="value"
+      nameVal="key"
+      tooltip=":key in :name"
+      yHelpers={data.length}
+      xHelpers={4}
+      svgClass="my-class"
+      fillColor="red"
+    />
+  </div>
+ 
+</div>
+
+<style>
+  .chart {
+    margin: auto;
+    max-width: 100%;
+  }
+  div {
+    text-align: center;
+  }
+  code {
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+  }
+  .npm-link {
+    user-select: all;
+  }
+</style>
