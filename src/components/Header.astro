@@ -19,9 +19,17 @@ const isActive = (path: string) =>
     
       <a href={getRelativeLocaleUrl(locale, "/")} class="logo-link">
         <Hero 
-  title="翻訳躍進マニフェスト"
-      subtitle="日本の新たな経済革命の幕開け"
-    />
+  title={t({
+    ja: "翻訳躍進マニフェスト",
+    en: "Translation Advancement Manifesto",
+    "zh-cn": "翻译进步宣言"
+  })}
+  subtitle={t({
+    ja: "日本の新たな経済革命の幕開け",
+    en: "The Dawn of Japan's New Economic Revolution",
+    "zh-cn": "日本新经济革命的开端"
+  })}
+/>
         
       </a>
 

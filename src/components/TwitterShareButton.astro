@@ -4,6 +4,9 @@ interface Props {
   url: string;
 }
 
+import { LOCALES, useTranslations, type Lang } from "@/i18n";
+const t = useTranslations(Astro.currentLocale as Lang);
+
 const { text, url } = Astro.props;
 
 const encodedText = encodeURIComponent(text);
@@ -16,7 +19,11 @@ const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodedText}&ur
   rel="noopener noreferrer"
   class="twitter-share-button"
 >
-  X で共有
+  {t({
+    ja: "X で共有",
+    en: "Share on X",
+    "zh-cn": "在 X 上分享"
+  })}
   <span class="material-icons-sharp">open_in_new</span>
 </a>
 
