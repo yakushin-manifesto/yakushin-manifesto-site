@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://astro-i18n-starter.pages.dev/sitemap-index.xml
+Sitemap: https://yakushin-manifesto.org/sitemap-index.xml
