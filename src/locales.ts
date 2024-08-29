@@ -13,6 +13,10 @@ export const LOCALES_SETTING: LocaleSetting = {
   "zh-cn": {
     "label": "简体中文",
     "lang": "zh-CN"
+  },
+  "ko": {
+    "label": "한국어",
+    "lang": "ko"
   }
 };
 
