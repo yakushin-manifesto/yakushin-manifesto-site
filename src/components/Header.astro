@@ -8,6 +8,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 const t = useTranslations(Astro.currentLocale as Lang);
 
 import AstroImage from "@/assets/astro-logo.svg";
+import LogoImage from "@/assets/yakushin01.png";
 
 const locale = Astro.currentLocale as Lang;
 
@@ -18,8 +19,7 @@ const isActive = (path: string) =>
 <header class="l-header">
   <h1 dir="ltr">
     <a href={getRelativeLocaleUrl(locale, "/")}>
-      <Image src={AstroImage} alt="Astro" />
-      Manifest
+      <Image src={LogoImage} alt="翻訳躍進マニフェスト" width={512} height={512} />
     </a>
   </h1>
 
