@@ -2,16 +2,19 @@
 
 :root {
   @media (prefers-color-scheme: dark) {
+    --color-theme: oklch(0.6 0.28 29.2);
     --color-theme: #ee0f0f;
     --color-accent: #943e0d;
     --color-base: #342c28;
-    --color-main: #faf9f6;
+    --color-main: #fff;
     --color-caution: #FFAA2B;
   }
   @media (prefers-color-scheme: light) {
     --color-theme: #ee0f0f;
+    --color-theme: oklch(0.6 0.28 29.2);
     --color-accent: #ffcc21;
-    --color-base: #faf9f6;
+    --color-accent: oklch(0.85 0.25 85);
+    --color-base: #fff;
     --color-main: #342c28;
     --color-caution: #A80A00;
   }

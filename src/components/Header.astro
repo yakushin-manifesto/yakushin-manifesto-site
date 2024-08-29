@@ -2,14 +2,12 @@
 // Header & Navigation UI displayed on each page.
 
 import LocaleSelect from "@/components/i18n/LocaleSelect.astro";
-import { Image } from "astro:assets";
+
 import { useTranslations, type Lang } from "@/i18n";
 import { getRelativeLocaleUrl } from "astro:i18n";
 const t = useTranslations(Astro.currentLocale as Lang);
 
-import AstroImage from "@/assets/astro-logo.svg";
-import LogoImage from "@/assets/yakushin01.png";
-
+import Hero from '@/components/Hero.astro'
 const locale = Astro.currentLocale as Lang;
 
 const isActive = (path: string) =>
@@ -17,15 +15,26 @@ const isActive = (path: string) =>
 ---
 
 <header class="l-header">
-  <h1 dir="ltr">
-    <a href={getRelativeLocaleUrl(locale, "/")}>
-      <Image src={LogoImage} alt="翻訳躍進マニフェスト" width={512} height={512} />
-    </a>
-  </h1>
+  <div class="header-content">
+    
+      <a href={getRelativeLocaleUrl(locale, "/")} class="logo-link">
+        <Hero 
+  title="翻訳躍進マニフェスト"
+      subtitle="日本の新たな経済革命の幕開け"
+    />
+        
+      </a>
 
-  <LocaleSelect />
+    
+  </div>
+
+  <div class="sticky-locale-select">
+    <LocaleSelect />
+  </div>
+</header>
+
 <!-- 
-  <nav class="l-content">
+<nav class="l-content">
     <ul>
       <li>
         <a
@@ -97,24 +106,51 @@ const isActive = (path: string) =>
       </li>
     </ul>
   </nav>
-  -->
+-->
 </header>
 
 <style>
-  * {
-    flex-wrap: wrap;
-    justify-content: center;
+  .l-header {
+    position: relative;
+    /* background-color: var(--color-background, #ffffff); */
   }
 
-  header {
-    display: grid;
-    place-items: center;
-    gap: var(--sp-s);
+  .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width, 1200px);
+    padding-inline: var(--sp-m);
+    margin: 0 auto;
+  }
+
+  .logo-link {
+    display: block;
+    max-width: 800px; 
+    margin: 0 auto;
+  }
+
+  .sticky-locale-select {
+    position: absolute;
+    top: var(--sp-s);
+    right: var(--sp-m);
+    z-index: 1000;
+  }
+
+  @media (max-width: 768px) {
+    .sticky-locale-select {
+      position: fixed;
+    }
+  }
+
+  // Adjust header-content to prevent overlap
+  .header-content {
+    padding-right: calc(var(--sp-m) + 100px); // Adjust based on LocaleSelect width
   }
 
   h1 {
     margin-block-start: var(--sp-l);
-    margin-inline-start: -0.5em;
     font-size: 40px;
     font-family: var(--english-font);
     font-weight: 900;
@@ -127,7 +163,7 @@ const isActive = (path: string) =>
       align-items: center;
     }
     img {
-      width: 6em;
+      width: 12em;
       position: relative;
       inset: 0.1em;
     }
@@ -182,5 +218,10 @@ const isActive = (path: string) =>
         font-size: 0.9em;
       }
     }
+  }
+
+  // Adjust header-content to prevent overlap
+  .header-content {
+    padding-right: calc(var(--sp-m) + 100px); // Adjust based on LocaleSelect width
   }
 </style>
