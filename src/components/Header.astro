@@ -7,12 +7,16 @@ import { useTranslations, type Lang } from "@/i18n";
 import { getRelativeLocaleUrl } from "astro:i18n";
 const t = useTranslations(Astro.currentLocale as Lang);
 
+import { GoogleAnalytics } from 'astro-analytics';
+
 import Hero from '@/components/Hero.astro'
 const locale = Astro.currentLocale as Lang;
 
 const isActive = (path: string) =>
   getRelativeLocaleUrl(locale, path) === Astro.url.pathname;
 ---
+
+<GoogleAnalytics id="G-9811PM6Z2J" />
 
 <header class="l-header">
   <div class="header-content">
