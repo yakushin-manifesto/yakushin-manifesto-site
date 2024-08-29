@@ -5,14 +5,14 @@ interface Props {
 }
 
 import { Image } from "astro:assets";
-import LogoImage from "@/assets/yakushin02.png";
+import LogoImage from "@/assets/yakushin02-700.png";
 
 const { title, subtitle } = Astro.props;
 ---
 
 <div class="hero-container">
   <div class="hero-content">
-    <Image src={LogoImage} alt="Manifesto" width={420} height={420} />
+    <Image src={LogoImage} alt="Manifesto" width={350} height={350} />
     <h1 class="hero-title">
       {title}
     </h1>
